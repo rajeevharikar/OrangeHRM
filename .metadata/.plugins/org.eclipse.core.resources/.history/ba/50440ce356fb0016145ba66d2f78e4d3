@@ -1,0 +1,16 @@
+package com.hrm.scripts;
+
+import org.testng.annotations.Test;
+
+import com.hrm.base.BaseTest;
+import com.hrm.pages.DashboardPage;
+
+@Test
+public class CreateDeleteEmp extends BaseTest{
+	
+	DashboardPage dbPage= new DashboardPage(driver);
+
+
+	
+
+}

@@ -1,0 +1,11 @@
+package com.hrm.scripts;
+
+import com.hrm.base.BaseTest;
+import com.hrm.pages.DashboardPage;
+
+public class CreateDeleteEmp extends BaseTest{
+
+
+	
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.hrm.scripts.TestSearchBtn"/>
+      <class name="com.hrm.scripts.LoginLogoutTest"/>
+      <class name="com.hrm.scripts.VerifyIncludeListBoxforSortedandDuplicates"/>
+      <class name="com.hrm.scripts.VerifyJobTitleIsSorted"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

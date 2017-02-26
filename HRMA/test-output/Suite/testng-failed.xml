@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.hrm.scripts.VerifyIncludeListBoxforSortedandDuplicates">
+        <methods>
+          <include name="verifyJobTitleIsSorted"/>
+          <include name="postCondition"/>
+          <include name="initApplication"/>
+          <include name="closeApplication"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- com.hrm.scripts.VerifyIncludeListBoxforSortedandDuplicates -->
+      <class name="com.hrm.scripts.TestSearchBtn">
+        <methods>
+          <include name="initReport"/>
+          <include name="postCondition"/>
+          <include name="initApplication"/>
+          <include name="closeApplication"/>
+          <include name="publishReport"/>
+          <include name="preCondition"/>
+          <include name="initGlobalVar"/>
+        </methods>
+      </class> <!-- com.hrm.scripts.TestSearchBtn -->
+      <class name="com.hrm.scripts.LoginLogoutTest">
+        <methods>
+          <include name="postCondition"/>
+          <include name="initApplication"/>
+          <include name="closeApplication"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- com.hrm.scripts.LoginLogoutTest -->
+      <class name="com.hrm.scripts.VerifyJobTitleIsSorted">
+        <methods>
+          <include name="postCondition"/>
+          <include name="initApplication"/>
+          <include name="closeApplication"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- com.hrm.scripts.VerifyJobTitleIsSorted -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

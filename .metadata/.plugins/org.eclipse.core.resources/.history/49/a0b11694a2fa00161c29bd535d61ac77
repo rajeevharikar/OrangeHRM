@@ -1,0 +1,23 @@
+package com.hrm.scripts;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import com.hrm.base.AutomationConstants;
+
+public class JavascriptExecutorsampleexample implements AutomationConstants{
+	
+	public static void main(String[] args) {
+		
+		System.setProperty(CHROME_KEY, CHROME_VALUE);
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("file:///E:/textjavascriptexample.html");
+		JavascriptExecutor j= (JavascriptExecutor) driver;
+		//1
+		j.executeScript("document.getElementById('t1').value='rajeev'");
+		
+		
+	}
+	
+}
