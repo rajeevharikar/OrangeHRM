@@ -27,16 +27,9 @@ public abstract class BasePage {
   
   public void verifyElementIsPresent(WebElement element)
   {
-	  try
-	  {
-		  wait.until(ExpectedConditions.visibilityOf(element));
-		  log.info("Element is Present");
-	  }
-	  catch(Exception e)
-	  {
-		  log.error("Element is not Present");
-		  Assert.fail();
-	  }
+	  boolean present = Utility.verifyElementIsPresent(driver, element);
+	 Assert.assertTrue(present);
+	 log.info("Element is present");
   }
   
   public void verifyElementIsNotPresent(By locator)

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="26270" started-at="2017-02-28T14:14:57Z" finished-at="2017-02-28T14:15:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="26270" started-at="2017-02-28T14:14:57Z" finished-at="2017-02-28T14:15:24Z">
+      <class name="com.hrm.scripts.SwitchToLocalizationWindow">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="initReport" is-config="true" duration-ms="317" started-at="2017-02-28T19:44:57Z" finished-at="2017-02-28T19:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method status="PASS" signature="initGlobalVar()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="initGlobalVar" is-config="true" duration-ms="2" started-at="2017-02-28T19:44:57Z" finished-at="2017-02-28T19:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initGlobalVar -->
+        <test-method status="PASS" signature="initApplication(java.lang.String)[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="initApplication" is-config="true" duration-ms="4278" started-at="2017-02-28T19:44:57Z" finished-at="2017-02-28T19:45:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initApplication -->
+        <test-method status="PASS" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="preCondition" is-config="true" duration-ms="3740" started-at="2017-02-28T19:45:02Z" finished-at="2017-02-28T19:45:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hrm.scripts.SwitchToLocalizationWindow.switchToLocalizationWindow() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="switchToLocalizationWindow()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="switchToLocalizationWindow" duration-ms="17021" started-at="2017-02-28T19:45:05Z" finished-at="2017-02-28T19:45:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchToLocalizationWindow -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="postCondition" is-config="true" duration-ms="47" started-at="2017-02-28T19:45:22Z" finished-at="2017-02-28T19:45:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=switchToLocalizationWindow status=SUCCESS method=SwitchToLocalizationWindow.switchToLocalizationWindow()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="closeApplication" is-config="true" duration-ms="1158" started-at="2017-02-28T19:45:22Z" finished-at="2017-02-28T19:45:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method status="PASS" signature="publishReport()[pri:0, instance:com.hrm.scripts.SwitchToLocalizationWindow@26ba2a48]" name="publishReport" is-config="true" duration-ms="459" started-at="2017-02-28T19:45:24Z" finished-at="2017-02-28T19:45:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- publishReport -->
+      </class> <!-- com.hrm.scripts.SwitchToLocalizationWindow -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,42 @@
+package com.hrm.scripts;
+
+import org.testng.annotations.Test;
+
+import com.hrm.base.BaseTest;
+import com.hrm.pages.AddEmpPage;
+import com.hrm.pages.DashboardPage;
+import com.hrm.pages.EmpInfoPage;
+import com.hrm.pages.PersonalDetailsPage;
+
+import generics.Utility;
+
+public class CreateDeleteMultipleEmp extends BaseTest{
+	
+	@Test
+	public void testCreateDeleteEmp() throws InterruptedException
+	{
+	DashboardPage dbPage= new DashboardPage(driver);
+	dbPage.clickPIM_Menu();
+	
+	EmpInfoPage eiPage= new EmpInfoPage(driver);
+	eiPage.clickAddemp_Menu();
+	
+	AddEmpPage aePage= new AddEmpPage(driver);
+	
+	String fn = Utility.getExcelCellValue(INPUT_PATH, "Emp", 1, 0);
+	String ln = Utility.getExcelCellValue(INPUT_PATH, "Emp", 1, 1);
+	aePage.setFirstname(fn);
+	aePage.setlasttname(ln);
+	aePage.clickSave();
+	
+	PersonalDetailsPage pdPage= new PersonalDetailsPage(driver);
+	pdPage.verifyFirstName(fn);
+	
+	pdPage.clickEmpList_Menu();
+    Thread.sleep(3000);
+	eiPage.selectAllCheckBox();
+	eiPage.clickDelete();
+	eiPage.clickOk();
+	eiPage.noRecordFoundText();
+	}
+}

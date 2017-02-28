@@ -2,6 +2,7 @@ package com.hrm.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import generics.Utility;
@@ -23,7 +24,14 @@ public abstract class HomePage extends BasePage{
 	@FindBy(id="menu_pim_viewEmployeeList")
 	private WebElement empList_Menu;
 	
+	@FindBy(id="menu_admin_viewAdminModule")
+	private WebElement admin_Menu;
 	
+	@FindBy(id="menu_admin_Configuration")
+	private WebElement configurationBtn;
+	
+	@FindBy(id="menu_admin_localization")
+	private WebElement localozationBtn;
 	
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -42,6 +50,22 @@ public abstract class HomePage extends BasePage{
 	public void clickEmpList_Menu()
 	{
 		empList_Menu.click();
+	}
+	
+	public void clickAdmin_Menu()
+	{
+		admin_Menu.click();
+	}
+	
+	public void hoverConfigurationBtn()
+	{
+		Actions actions= new Actions(driver);
+		actions.moveToElement(configurationBtn).perform();;
+	}
+	
+	public void clickLocalizationBtn()
+	{
+	   waitAndClick(localozationBtn);
 	}
 
 	public void logout(){

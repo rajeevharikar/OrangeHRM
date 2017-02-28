@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37741" started-at="2017-02-25T12:47:12Z" finished-at="2017-02-25T12:47:50Z">
+  <suite name="Default suite" duration-ms="10327" started-at="2017-02-28T15:30:00Z" finished-at="2017-02-28T15:30:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37741" started-at="2017-02-25T12:47:12Z" finished-at="2017-02-25T12:47:50Z">
-      <class name="com.hrm.scripts.CreateDeleteEmp">
-        <test-method status="PASS" signature="initReport()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="initReport" is-config="true" duration-ms="318" started-at="2017-02-25T18:17:12Z" finished-at="2017-02-25T18:17:12Z">
+    <test name="Default test" duration-ms="10327" started-at="2017-02-28T15:30:00Z" finished-at="2017-02-28T15:30:10Z">
+      <class name="com.hrm.scripts.TestPhoto">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="initReport" is-config="true" duration-ms="317" started-at="2017-02-28T20:59:59Z" finished-at="2017-02-28T21:00:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initReport -->
-        <test-method status="PASS" signature="initGlobalVar()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="initGlobalVar" is-config="true" duration-ms="2" started-at="2017-02-25T18:17:12Z" finished-at="2017-02-25T18:17:12Z">
+        <test-method status="PASS" signature="initGlobalVar()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="initGlobalVar" is-config="true" duration-ms="2" started-at="2017-02-28T21:00:00Z" finished-at="2017-02-28T21:00:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initGlobalVar -->
-        <test-method status="PASS" signature="initApplication(java.lang.String)[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="initApplication" is-config="true" duration-ms="2989" started-at="2017-02-25T18:17:12Z" finished-at="2017-02-25T18:17:15Z">
+        <test-method status="PASS" signature="initApplication(java.lang.String)[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="initApplication" is-config="true" duration-ms="4229" started-at="2017-02-28T21:00:00Z" finished-at="2017-02-28T21:00:04Z">
           <params>
             <param index="0">
               <value>
@@ -26,41 +26,77 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initApplication -->
-        <test-method status="PASS" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="preCondition" is-config="true" duration-ms="3782" started-at="2017-02-25T18:17:15Z" finished-at="2017-02-25T18:17:19Z">
+        <test-method status="PASS" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="preCondition" is-config="true" duration-ms="3832" started-at="2017-02-28T21:00:04Z" finished-at="2017-02-28T21:00:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.scripts.CreateDeleteEmp.testCreateDeleteEmp() throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.hrm.scripts.TestPhoto.test()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testCreateDeleteEmp()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="testCreateDeleteEmp" duration-ms="29731" started-at="2017-02-25T18:17:19Z" finished-at="2017-02-25T18:17:48Z">
+        <test-method status="FAIL" signature="test()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="test" duration-ms="13" started-at="2017-02-28T21:00:08Z" finished-at="2017-02-28T21:00:08Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at com.hrm.scripts.TestPhoto.test(TestPhoto.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateDeleteEmp -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="postCondition" is-config="true" duration-ms="89" started-at="2017-02-25T18:17:48Z" finished-at="2017-02-25T18:17:49Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="postCondition" is-config="true" duration-ms="536" started-at="2017-02-28T21:00:08Z" finished-at="2017-02-28T21:00:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testCreateDeleteEmp status=SUCCESS method=CreateDeleteEmp.testCreateDeleteEmp()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48] output={null}]]]>
+                <![CDATA[[TestResult name=test status=FAILURE method=TestPhoto.test()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="closeApplication" is-config="true" duration-ms="1130" started-at="2017-02-25T18:17:49Z" finished-at="2017-02-25T18:17:50Z">
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="closeApplication" is-config="true" duration-ms="1221" started-at="2017-02-28T21:00:09Z" finished-at="2017-02-28T21:00:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-        <test-method status="PASS" signature="publishReport()[pri:0, instance:com.hrm.scripts.CreateDeleteEmp@26ba2a48]" name="publishReport" is-config="true" duration-ms="406" started-at="2017-02-25T18:17:50Z" finished-at="2017-02-25T18:17:50Z">
+        <test-method status="PASS" signature="publishReport()[pri:0, instance:com.hrm.scripts.TestPhoto@26ba2a48]" name="publishReport" is-config="true" duration-ms="501" started-at="2017-02-28T21:00:10Z" finished-at="2017-02-28T21:00:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishReport -->
-      </class> <!-- com.hrm.scripts.CreateDeleteEmp -->
+      </class> <!-- com.hrm.scripts.TestPhoto -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

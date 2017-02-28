@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.hrm.base.HomePage;
 
@@ -28,18 +29,34 @@ public class EmpInfoPage extends HomePage {
 	@FindBy(id="dialogDeleteBtn")
 	private WebElement ok;
 	
+	@FindBy(id="ohrmList_chkSelectAll")
+	private WebElement selectAllCheckBox;
+	
+	@FindBy(xpath="//td[text()='No Records Found']")
+	private WebElement noRecordFoundText;
+	
 	public void selectEmpcheckBox(String empID)
 	{
 		String xp="//a[text()='"+empID+"']/../..//input[@type='checkbox']";
 		driver.findElement(By.xpath(xp)).click();
 	}
 	
+	public void selectAllCheckBox()
+	{
+		selectAllCheckBox.click();
+	}
+	
+	public void noRecordFoundText()
+	{
+		verifyElementIsPresent(noRecordFoundText);
+	}
+	
+	
 	public void verifyJobTitleHasNoDuplicate()
 	{
 		log.info("verify that content of the jobTitle ListBox has duplicates");
 	    verifyListBoxHasNoDuplicate(jobTitleListBox, 1);
 	    log.info("ListBox has no Duplicates");
-	    
 	}
 
 	public void verifySearchBtnPresent()

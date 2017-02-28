@@ -1,5 +1,0 @@
-URL=http://localhost:81/orangehrm/symfony/web/index.php/auth/login
-IMPLICIT=20
-EXPLICIT=10
-UN=rajeev
-PW=manager

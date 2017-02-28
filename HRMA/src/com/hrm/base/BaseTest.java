@@ -82,6 +82,7 @@ public abstract class BaseTest implements AutomationConstants{
 		if(browser.equals("chrome")){
 			System.setProperty(CHROME_KEY,CHROME_VALUE);
 			driver=new ChromeDriver();
+			driver.manage().window().maximize();
 		}
 		else{
 			System.setProperty(GECKO_KEY,GECKO_VALUE);
@@ -109,20 +110,25 @@ public abstract class BaseTest implements AutomationConstants{
 	
 	@AfterMethod
 	public void postCondition(ITestResult testNGTestResult){
-		if(logoutRequired){
-			log.info("Auto logout");
-			new DashboardPage(driver).logout();
-		}
 		
 		if(testNGTestResult.getStatus()==ITestResult.FAILURE)
 		{
-			eTest.log(LogStatus.FAIL,"Check log for details");
+			String imagePath = Utility.getScreenShot(AutomationConstants.SNAP_PATH);
+			System.out.println(imagePath);
+			Utility.getScreenShot(driver, AutomationConstants.SNAP_PATH);
+			String path = eTest.addScreenCapture("."+imagePath);
+			System.out.println(path);
+			eTest.log(LogStatus.FAIL,"Check log for details", path);
 			log.error("Test is FAILED");
 		}
 		else
 		{
 			eTest.log(LogStatus.PASS,"Script executed successfully");
 			log.info("Test is PASSED");
+		}
+		if(logoutRequired){
+			log.info("Auto logout");
+			new DashboardPage(driver).logout();
 		}
 		eReport.endTest(eTest);
 	}

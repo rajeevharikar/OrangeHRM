@@ -1,0 +1,22 @@
+package com.hrm.scripts;
+
+import org.testng.annotations.Test;
+
+import com.hrm.base.BaseTest;
+import com.hrm.pages.DashboardPage;
+
+public class SwitchToLocalizationWindow extends BaseTest {
+	
+	@Test
+	public void switchToLocalizationWindow()
+	{
+	   DashboardPage dbPage= new DashboardPage(driver);
+	   
+	   dbPage.clickAdmin_Menu();
+	   Thread.sleep(2000);
+	   dbPage.hoverConfigurationBtn();
+	   dbPage.clickLocalizationBtn();
+		
+	}
+
+}

@@ -4,18 +4,19 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
-<fullyQualifiedTypeName name="generics.Utility"/>
 <fullyQualifiedTypeName name="com.hrm.base.HomePage"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
-<fullyQualifiedTypeName name="junit.framework.Assert"/>
-<fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="com.hrm.base.BaseTest"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="com.hrm.pages.DashboardPage"/>
-<fullyQualifiedTypeName name="com.hrm.pages.EmpInfoPage"/>
 <fullyQualifiedTypeName name="com.hrm.pages.AddEmpPage"/>
 <fullyQualifiedTypeName name="com.hrm.pages.PersonalDetailsPage"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.hrm.pages.EmpInfoPage"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+<fullyQualifiedTypeName name="generics.Utility"/>
 </qualifiedTypeNameHistroy>

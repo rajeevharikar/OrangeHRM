@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import javax.imageio.ImageIO;
 
@@ -24,7 +25,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Utility {
 	
@@ -38,6 +42,98 @@ public class Utility {
 		JavascriptExecutor j= (JavascriptExecutor) driver;
 		j.executeScript("arguments[0].click()", ele);
 	}
+	
+	public static boolean switchBrowser(WebDriver driver,String eTitle)
+	{
+		String currentWH= "";
+		try
+		{
+		  currentWH =driver.getWindowHandle();	
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Set<String> allWH = driver.getWindowHandles();
+		for(String wh:allWH)
+		{
+			String title=driver.switchTo().window(wh).getTitle();
+			if(title.equals(eTitle))
+			{
+				System.out.println("Browser Found");
+				return true;
+			}
+		}
+		driver.switchTo().window(currentWH);
+		return false;
+	}
+	
+	public static boolean switchBrowser(String eUrl,WebDriver driver)
+	{
+		String currentWH= "";
+		try
+		{
+		  currentWH =driver.getWindowHandle();	
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Set<String> allWH = driver.getWindowHandles();
+		for(String wh:allWH)
+		{
+			String title=driver.switchTo().window(wh).getCurrentUrl();
+			if(title.contains(eUrl))
+			{
+				System.out.println("Browser Found");
+				return true;
+			}
+		}
+		driver.switchTo().window(currentWH);
+		return false;
+	}
+	
+	public static boolean switchBrowser(WebElement element,WebDriver driver)
+	{
+		String currentWH= "";
+		try
+		{
+		  currentWH =driver.getWindowHandle();	
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Set<String> allWH = driver.getWindowHandles();
+		for(String wh:allWH)
+		{
+			
+			driver.switchTo().window(wh);
+			
+			if(verifyElementIsPresent(driver,element))
+			{
+				System.out.println("Browser Found");
+				return true;
+			}
+		}
+		driver.switchTo().window(currentWH);
+		return false;
+	}
+	
+	public static boolean verifyElementIsPresent(WebDriver driver,WebElement element)
+	  {
+		WebDriverWait wait= new WebDriverWait(driver, 5);  
+		try
+		  {
+			  wait.until(ExpectedConditions.visibilityOf(element));
+			  return true;
+		  }
+		  catch(Exception e)
+		  {
+			 return false; 
+		  }
+	  }
+	
 	
 	public static ArrayList<String> getAllTextFromListBox(WebElement listBox,int startindex)
 	{
